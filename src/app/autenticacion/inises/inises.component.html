@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <h4>Introduzca los siguientes datos:</h4>
+            <label>Correo Electrónico</label>
+            <input type="email" id="inputEmail" class="form-control" formControlName="email" required autofocus>
+            <label>Contraseña</label>
+            <input type="password" id="inputPassword" class="form-control" formControlName="password" required>
+            <hr>
+            <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Inicie sesión</button>
+            <div>
+                <div (click)="this.login()" id="customBtn" class="customGPlusSignIn">
+                    <span class="icon"></span>
+                    <button type="button" class="btn btn-primary">Google</button>
+                 
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
